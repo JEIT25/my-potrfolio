@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="group relative rounded-2xl bg-white border border-slate-200 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#0f172a] hover:shadow-xl hover:shadow-slate-900/5 hover:-translate-y-1 overflow-hidden">
+  <div class="group relative rounded-2xl bg-white border-2 border-slate-300 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#0f172a] hover:shadow-xl hover:shadow-slate-900/10 hover:-translate-y-1 overflow-hidden">
     
     <div class="space-y-4">
       <!-- Category Subtitle -->
@@ -40,8 +40,8 @@ const props = defineProps({
     </div>
 
     <!-- Direct URL Link: Visit System -->
-    <div class="pt-5 mt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-      <span class="text-slate-700 font-mono text-xs font-semibold">
+    <div class="pt-5 mt-4 border-t-2 border-slate-200 flex items-center justify-between text-xs">
+      <span class="text-slate-800 font-mono text-xs font-bold">
         Hosted Web Application
       </span>
 

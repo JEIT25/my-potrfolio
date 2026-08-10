@@ -12,12 +12,12 @@ const showModal = ref(false)
 </script>
 
 <template>
-  <div class="rounded-2xl bg-white border border-slate-200 p-5 space-y-4 hover:border-[#0f172a] transition-all flex flex-col justify-between overflow-hidden group shadow-xs hover:shadow-md">
+  <div class="rounded-2xl bg-white border-2 border-slate-300 p-5 space-y-4 hover:border-[#0f172a] transition-all flex flex-col justify-between overflow-hidden group shadow-sm hover:shadow-lg">
     
     <!-- Header -->
     <div class="flex items-start justify-between gap-3">
       <div>
-        <span class="text-[11px] font-mono text-slate-700 font-semibold block">{{ cert.issuer }}</span>
+        <span class="text-[11px] font-mono text-slate-700 font-bold block">{{ cert.issuer }}</span>
         <h3 class="text-base font-extrabold text-[#0f172a] mt-0.5 leading-snug">
           {{ cert.title }}
         </h3>
@@ -31,7 +31,7 @@ const showModal = ref(false)
     <!-- Certificate Picture Container -->
     <div 
       @click="showModal = true"
-      class="relative rounded-xl overflow-hidden border border-slate-200 bg-slate-50 cursor-pointer group-hover:border-slate-400 transition-all shadow-xs aspect-[1.4/1]"
+      class="relative rounded-xl overflow-hidden border-2 border-slate-200 bg-slate-50 cursor-pointer group-hover:border-[#0f172a] transition-all shadow-xs aspect-[1.4/1]"
     >
       <!-- Certificate Picture -->
       <img
@@ -47,7 +47,7 @@ const showModal = ref(false)
     </p>
 
     <!-- Actions & Official Verification URL -->
-    <div class="pt-3 border-t border-slate-200 space-y-2">
+    <div class="pt-3 border-t-2 border-slate-200 space-y-2">
       <div class="flex items-center justify-between text-xs">
         <span class="text-[11px] font-mono text-slate-700 font-bold">
           Verified Certificate
@@ -62,7 +62,7 @@ const showModal = ref(false)
       </div>
 
       <!-- Official Verification URL -->
-      <div v-if="cert.verifyUrl && cert.verifyUrl.startsWith('http')" class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono">
+      <div v-if="cert.verifyUrl && cert.verifyUrl.startsWith('http')" class="pt-2 border-t border-slate-200 flex items-center justify-between text-[11px] font-mono">
         <span class="text-slate-600 font-semibold">Verify URL:</span>
         <a 
           :href="cert.verifyUrl" 
@@ -86,7 +86,7 @@ const showModal = ref(false)
         class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in"
         @click.self="showModal = false"
       >
-        <div class="w-full max-w-4xl bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-4 relative">
+        <div class="w-full max-w-4xl bg-white border-2 border-slate-300 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-4 relative">
           <!-- Close Button -->
           <button 
             @click="showModal = false"
@@ -102,7 +102,7 @@ const showModal = ref(false)
           </div>
 
           <!-- Full Certificate Image View -->
-          <div class="relative border border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-inner flex items-center justify-center">
+          <div class="relative border-2 border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-inner flex items-center justify-center">
             <img :src="cert.imagePath" :alt="cert.title" class="w-full h-auto object-contain max-h-[75vh]" />
           </div>
 

@@ -23,6 +23,19 @@
   code, pre, .font-mono {
     font-family: var(--font-mono);
   }
+
+  /* Force pointer cursor on all clickable and interactive elements */
+  a, 
+  button, 
+  input[type="submit"], 
+  input[type="button"],
+  [role="button"], 
+  [onclick],
+  .cursor-pointer,
+  select,
+  summary {
+    cursor: pointer !important;
+  }
 }
 
 /* Custom Scrollbar styled for dark Laravel aesthetic */

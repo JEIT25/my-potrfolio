@@ -64,7 +64,7 @@ onUnmounted(() => {
 
 <template>
   <div class="min-h-screen bg-white text-slate-900 font-sans selection:bg-[#0f172a] selection:text-white flex flex-col">
-
+    
     <!-- Top Header Navigation -->
     <HeaderNav
       :active-section="activeSection"
@@ -74,18 +74,18 @@ onUnmounted(() => {
 
     <!-- Main Stretched Container -->
     <div class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 flex justify-center">
-
+      
       <!-- Main Content Column -->
       <main class="w-full space-y-16">
-
+        
         <!-- SECTION 1: Editorial Split Intro Layout -->
         <section id="introduction" class="scroll-mt-24 space-y-6">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-
+            
             <!-- Left Side: Graduation Portrait Image Banner -->
             <div class="lg:col-span-6">
               <div class="relative group max-w-[480px] mx-auto lg:mx-0">
-                <div class="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-xl aspect-[4/5] sm:aspect-[4/4.5]">
+                <div class="relative rounded-2xl overflow-hidden border-2 border-slate-300 bg-slate-100 shadow-xl aspect-[4/5] sm:aspect-[4/4.5]">
                   <img
                     src="/jerold.jpg"
                     alt="Jerold M. Amora"
@@ -142,7 +142,7 @@ onUnmounted(() => {
           </h2>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div v-for="(edu, idx) in profileData.education" :key="idx" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 shadow-xs hover:border-[#0f172a] transition-colors">
+            <div v-for="(edu, idx) in profileData.education" :key="idx" class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-2 shadow-xs hover:border-[#0f172a] transition-colors">
               <div class="flex items-center justify-between text-xs font-mono">
                 <span class="text-[#ff2d20] font-extrabold">{{ edu.honor }}</span>
                 <span class="text-slate-900 font-bold">{{ edu.period }}</span>
@@ -156,7 +156,7 @@ onUnmounted(() => {
 
         <!-- SECTION 3: Hosted Systems & Projects (Stretched 3 Columns) -->
         <section id="projects" class="scroll-mt-24 space-y-8">
-          <div class="space-y-2 border-b border-slate-200 pb-4">
+          <div class="space-y-2 border-b-2 border-slate-200 pb-4">
             <span class="text-xs font-mono text-[#ff2d20] font-extrabold">PORTFOLIO SYSTEMS</span>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight">
               Hosted Web Applications & Systems
@@ -183,9 +183,9 @@ onUnmounted(() => {
           </h2>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
+            
             <!-- Frameworks -->
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
               <div class="text-xs font-mono font-extrabold text-[#ff2d20] tracking-wider uppercase">FRAMEWORKS</div>
               <ul class="space-y-2 text-sm font-bold text-[#0f172a]">
                 <li class="flex items-center gap-2">
@@ -208,7 +208,7 @@ onUnmounted(() => {
             </div>
 
             <!-- Languages -->
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
               <div class="text-xs font-mono font-extrabold text-[#0f172a] tracking-wider uppercase">LANGUAGES</div>
               <ul class="space-y-2 text-sm font-bold text-[#0f172a]">
                 <li class="flex items-center gap-2">
@@ -231,7 +231,7 @@ onUnmounted(() => {
             </div>
 
             <!-- Databases & Tools -->
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
               <div class="text-xs font-mono font-extrabold text-blue-700 tracking-wider uppercase">DATABASES & TOOLS</div>
               <ul class="space-y-2 text-sm font-bold text-[#0f172a]">
                 <li class="flex items-center gap-2">
@@ -254,7 +254,7 @@ onUnmounted(() => {
             </div>
 
             <!-- Servicing & Network -->
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
               <div class="text-xs font-mono font-extrabold text-amber-700 tracking-wider uppercase">SERVICING & NETWORK</div>
               <ul class="space-y-2 text-sm font-bold text-[#0f172a]">
                 <li class="flex items-center gap-2">
@@ -300,12 +300,12 @@ onUnmounted(() => {
             Work Experience
           </h2>
 
-          <div class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-6 shadow-xs hover:border-[#0f172a] transition-colors">
+          <div class="p-6 sm:p-8 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-6 shadow-xs hover:border-[#0f172a] transition-colors">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
+              
               <!-- Left Side: Role Details & 486 Hours Badge -->
               <div class="lg:col-span-7 space-y-4">
-                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-3">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b-2 border-slate-200 pb-3">
                   <div>
                     <h3 class="text-xl font-extrabold text-[#0f172a]">Intern – MIS Office</h3>
                     <p class="text-xs sm:text-sm text-slate-900 font-mono font-bold">Caraga State University – Cabadbaran Campus</p>
@@ -313,7 +313,7 @@ onUnmounted(() => {
                   <div class="text-right">
                     <span class="text-xs font-mono text-[#ff2d20] font-extrabold block">08/2025 – 12/2025</span>
                     <span class="px-2.5 py-0.5 rounded text-[11px] font-mono bg-emerald-100 text-emerald-900 font-extrabold border border-emerald-300 inline-block mt-1">
-                       486 Hours Completed
+                      486 Hours Completed
                     </span>
                   </div>
                 </div>
@@ -336,9 +336,9 @@ onUnmounted(() => {
 
               <!-- Right Side: Certificate of Completion Picture Card -->
               <div class="lg:col-span-5">
-                <div
+                <div 
                   @click="showMisCertModal = true"
-                  class="relative group rounded-xl overflow-hidden border border-slate-200 bg-white cursor-pointer hover:border-[#0f172a] transition-all shadow-md aspect-[1.4/1]"
+                  class="relative group rounded-xl overflow-hidden border-2 border-slate-300 bg-white cursor-pointer hover:border-[#0f172a] transition-all shadow-md aspect-[1.4/1]"
                 >
                   <img
                     src="/certificates/cert-mis-ojt.png"
@@ -357,13 +357,13 @@ onUnmounted(() => {
 
           <!-- MIS OJT Certificate Full Modal Inspection -->
           <Teleport to="body">
-            <div
+            <div 
               v-if="showMisCertModal"
               class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in"
               @click.self="showMisCertModal = false"
             >
-              <div class="w-full max-w-4xl bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-4 relative">
-                <button
+              <div class="w-full max-w-4xl bg-white border-2 border-slate-300 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-4 relative">
+                <button 
                   @click="showMisCertModal = false"
                   class="absolute top-4 right-4 p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-900 text-xs font-mono font-bold"
                 >
@@ -376,7 +376,7 @@ onUnmounted(() => {
                   <p class="text-xs text-slate-800 font-mono font-bold">Caraga State University – Cabadbaran Campus • 486 Hours Completed</p>
                 </div>
 
-                <div class="relative border border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-inner flex items-center justify-center">
+                <div class="relative border-2 border-slate-300 rounded-xl overflow-hidden bg-slate-50 shadow-inner flex items-center justify-center">
                   <img src="/certificates/cert-mis-ojt.png" alt="MIS OJT Certificate of Completion" class="w-full h-auto object-contain max-h-[75vh]" />
                 </div>
 
@@ -395,17 +395,17 @@ onUnmounted(() => {
           </h2>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 shadow-xs hover:border-[#0f172a] transition-colors">
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-2 shadow-xs hover:border-[#0f172a] transition-colors">
               <h3 class="text-base font-extrabold text-[#0f172a]">Web Development</h3>
               <p class="text-xs sm:text-sm text-slate-900 font-medium leading-relaxed">Single Page Applications with Vue and REST API backend with Laravel and NestJS.</p>
             </div>
 
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 shadow-xs hover:border-[#0f172a] transition-colors">
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-2 shadow-xs hover:border-[#0f172a] transition-colors">
               <h3 class="text-base font-extrabold text-[#0f172a]">Hardware & OS Servicing</h3>
               <p class="text-xs sm:text-sm text-slate-900 font-medium leading-relaxed">PC assembly, hardware upgrades, Windows OS configuration, and diagnostics.</p>
             </div>
 
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 shadow-xs hover:border-[#0f172a] transition-colors">
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-2 shadow-xs hover:border-[#0f172a] transition-colors">
               <h3 class="text-base font-extrabold text-[#0f172a]">Network Servicing</h3>
               <p class="text-xs sm:text-sm text-slate-900 font-medium leading-relaxed">TCP/IP addressing, DHCP/DNS configuration, and LAN connectivity testing.</p>
             </div>
@@ -419,10 +419,10 @@ onUnmounted(() => {
           </h2>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-            <div class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 shadow-xs">
+            
+            <div class="p-6 sm:p-8 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-4 shadow-xs">
               <h3 class="text-xl font-extrabold text-[#0f172a]">Jerold M. Amora</h3>
-
+              
               <div class="space-y-3 text-xs sm:text-sm font-mono">
                 <div>
                   <span class="text-slate-700 block text-[10px] font-bold">EMAIL</span>
@@ -443,7 +443,7 @@ onUnmounted(() => {
               </div>
             </div>
 
-            <form @submit.prevent="submitContact" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-xs">
+            <form @submit.prevent="submitContact" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs">
               <div class="text-xs font-extrabold text-[#0f172a] uppercase tracking-wider">SEND MESSAGE</div>
 
               <input
@@ -451,7 +451,7 @@ onUnmounted(() => {
                 type="email"
                 required
                 placeholder="Your email address"
-                class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-xs sm:text-sm text-slate-900 font-medium placeholder-slate-500 focus:outline-none focus:border-[#0f172a]"
+                class="w-full px-4 py-2.5 rounded-xl bg-white border-2 border-slate-300 text-xs sm:text-sm text-slate-900 font-medium placeholder-slate-500 focus:outline-none focus:border-[#0f172a]"
               />
 
               <textarea
@@ -459,7 +459,7 @@ onUnmounted(() => {
                 required
                 rows="3"
                 placeholder="Your message..."
-                class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-xs sm:text-sm text-slate-900 font-medium placeholder-slate-500 focus:outline-none focus:border-[#0f172a]"
+                class="w-full px-4 py-2.5 rounded-xl bg-white border-2 border-slate-300 text-xs sm:text-sm text-slate-900 font-medium placeholder-slate-500 focus:outline-none focus:border-[#0f172a]"
               ></textarea>
 
               <button
@@ -489,7 +489,7 @@ onUnmounted(() => {
     />
 
     <!-- Footer -->
-    <footer class="mt-auto border-t border-slate-200 bg-slate-50 py-6 text-center text-xs text-slate-700 font-mono font-bold">
+    <footer class="mt-auto border-t-2 border-slate-200 bg-slate-50 py-6 text-center text-xs text-slate-700 font-mono font-bold">
       © 2026 Jerold M. Amora • Full Stack Web Developer
     </footer>
 

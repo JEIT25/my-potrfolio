@@ -54,10 +54,10 @@ onUnmounted(() => {
   <Teleport to="body">
     <div 
       v-if="isOpen" 
-      class="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-950/80 backdrop-blur-sm animate-fade-in"
+      class="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-950/80 backdrop-blur-sm animate-fade-in cursor-pointer"
       @click.self="emit('close')"
     >
-      <div class="w-full max-w-xl bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+      <div class="w-full max-w-xl bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh] cursor-default">
         
         <!-- Search Input Bar -->
         <div class="p-4 border-b border-slate-200 flex items-center gap-3 bg-slate-50">
@@ -71,7 +71,10 @@ onUnmounted(() => {
             class="w-full bg-transparent text-slate-900 placeholder-slate-400 focus:outline-none text-sm font-sans"
             autofocus
           />
-          <kbd class="px-2 py-0.5 text-[10px] font-mono text-slate-500 bg-white border border-slate-200 rounded">
+          <kbd 
+            @click="emit('close')"
+            class="px-2 py-0.5 text-[10px] font-mono text-slate-500 bg-white border border-slate-200 rounded cursor-pointer hover:bg-slate-100"
+          >
             ESC
           </kbd>
         </div>
@@ -86,7 +89,7 @@ onUnmounted(() => {
             v-for="item in filteredItems"
             :key="item.id"
             @click="selectItem(item.id)"
-            class="w-full text-left p-3 rounded-xl hover:bg-slate-100 transition-colors flex items-start justify-between gap-3 group"
+            class="w-full text-left p-3 rounded-xl hover:bg-slate-100 transition-colors flex items-start justify-between gap-3 group cursor-pointer"
           >
             <div>
               <div class="flex items-center gap-2">
