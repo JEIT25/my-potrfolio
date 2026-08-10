@@ -132,7 +132,7 @@ export const profileData = {
     frameworks: ["Vue", "Laravel", "NestJS"],
     tools: ["Git", "GitHub", "VS Code", "Postman", "Vite", "NPM"],
     databases: ["MySQL", "PostgreSQL"],
-    frontend: ["HTML5", "CSS3", "Tailwind CSS", "RESTful APIs", "Pinia", "Vue Router"],
+    others: ["HTML", "CSS", "RESTful APIs", "Pinia", "Vue Router"],
     hosting: ["Vercel", "Supabase", "Render", "Railway"],
     aiTools: ["Claude", "Gemini", "DeepSeek"]
   },

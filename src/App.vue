@@ -172,9 +172,9 @@ onUnmounted(() => {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- Frameworks -->
+            <!-- Frameworks and Libraries -->
             <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
-              <div class="text-xs font-mono font-extrabold text-[#ff2d20] tracking-wider uppercase">FRAMEWORKS</div>
+              <div class="text-xs font-mono font-extrabold text-[#ff2d20] tracking-wider uppercase">FRAMEWORKS AND LIBRARIES</div>
               <ul class="space-y-2 text-sm font-bold text-[#0f172a]">
                 <li class="flex items-center gap-2">
                   <span class="text-[#ff2d20] font-black">•</span>
@@ -211,9 +211,24 @@ onUnmounted(() => {
                   <span class="text-[#0f172a] font-black">•</span>
                   <span>Python</span>
                 </li>
+              </ul>
+            </div>
+
+            <!-- Others -->
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
+              <div class="text-xs font-mono font-extrabold text-teal-700 tracking-wider uppercase">OTHERS</div>
+              <ul class="space-y-2 text-sm font-bold text-[#0f172a]">
                 <li class="flex items-center gap-2">
-                  <span class="text-[#0f172a] font-black">•</span>
-                  <span>HTML5 & CSS3</span>
+                  <span class="text-teal-700 font-black">•</span>
+                  <span>HTML & CSS</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-teal-700 font-black">•</span>
+                  <span>RESTful APIs</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-teal-700 font-black">•</span>
+                  <span>Pinia & Vue Router</span>
                 </li>
               </ul>
             </div>
