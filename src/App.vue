@@ -64,7 +64,7 @@ onUnmounted(() => {
 
 <template>
   <div class="min-h-screen bg-white text-slate-900 font-sans selection:bg-[#0f172a] selection:text-white flex flex-col">
-    
+
     <!-- Top Header Navigation -->
     <HeaderNav
       :active-section="activeSection"
@@ -74,14 +74,14 @@ onUnmounted(() => {
 
     <!-- Main Stretched Container -->
     <div class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 flex justify-center">
-      
+
       <!-- Main Content Column -->
       <main class="w-full space-y-16">
-        
+
         <!-- SECTION 1: Editorial Split Intro Layout -->
         <section id="introduction" class="scroll-mt-24 space-y-6">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
+
             <!-- Left Side: Graduation Portrait Image Banner -->
             <div class="lg:col-span-6">
               <div class="relative group max-w-[480px] mx-auto lg:mx-0">
@@ -104,7 +104,7 @@ onUnmounted(() => {
 
                 <!-- Vertical Specialty Stack (Solid High Contrast Dark Text) -->
                 <div class="space-y-2 text-lg sm:text-2xl font-serif text-[#0f172a] leading-snug">
-                  <p class="font-bold text-[#ff2d20]">Vue / Laravel / NestJS Developer</p>
+                  <p class="font-bold text-[#ff2d20]">Vue / Laravel / NestJS Web Developer</p>
                   <p class="text-slate-900 font-bold">BSIT Cum Laude (2026)</p>
                   <p class="text-slate-900 font-bold">TESDA NC II</p>
                 </div>
@@ -183,7 +183,7 @@ onUnmounted(() => {
           </h2>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            
+
             <!-- Frameworks -->
             <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
               <div class="text-xs font-mono font-extrabold text-[#ff2d20] tracking-wider uppercase">FRAMEWORKS</div>
@@ -344,7 +344,7 @@ onUnmounted(() => {
 
           <div class="p-6 sm:p-8 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-6 shadow-xs hover:border-[#0f172a] transition-colors">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              
+
               <!-- Left Side: Role Details & 486 Hours Badge -->
               <div class="lg:col-span-7 space-y-4">
                 <div class="flex flex-wrap items-center justify-between gap-2 border-b-2 border-slate-200 pb-3">
@@ -378,7 +378,7 @@ onUnmounted(() => {
 
               <!-- Right Side: Certificate of Completion Picture Card -->
               <div class="lg:col-span-5">
-                <div 
+                <div
                   @click="showMisCertModal = true"
                   class="relative group rounded-xl overflow-hidden border-2 border-slate-300 bg-white cursor-pointer hover:border-[#0f172a] transition-all shadow-md aspect-[1.4/1]"
                 >
@@ -399,13 +399,13 @@ onUnmounted(() => {
 
           <!-- MIS OJT Certificate Full Modal Inspection -->
           <Teleport to="body">
-            <div 
+            <div
               v-if="showMisCertModal"
               class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in"
               @click.self="showMisCertModal = false"
             >
               <div class="w-full max-w-4xl bg-white border-2 border-slate-300 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-4 relative">
-                <button 
+                <button
                   @click="showMisCertModal = false"
                   class="absolute top-4 right-4 p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-900 text-xs font-mono font-bold"
                 >
@@ -461,10 +461,10 @@ onUnmounted(() => {
           </h2>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            
+
             <div class="p-6 sm:p-8 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-4 shadow-xs">
               <h3 class="text-xl font-extrabold text-[#0f172a]">Jerold M. Amora</h3>
-              
+
               <div class="space-y-3 text-xs sm:text-sm font-mono">
                 <div>
                   <span class="text-slate-700 block text-[10px] font-bold">EMAIL</span>
