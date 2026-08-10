@@ -150,7 +150,7 @@ onUnmounted(() => {
               Hosted Web Applications & Systems
             </h2>
             <p class="text-xs text-slate-900 font-bold font-mono">
-              Live hosted systems, capstone machine learning projects, and full-stack enterprise web applications.
+              Live hosted systems, capstone machine learning projects, and web applications.
             </p>
           </div>
 
@@ -448,10 +448,10 @@ onUnmounted(() => {
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            
+
             <!-- Email Card -->
-            <a 
-              href="mailto:jeroldash.amora@gmail.com" 
+            <a
+              href="mailto:jeroldash.amora@gmail.com"
               class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] hover:bg-white transition-all cursor-pointer group"
             >
               <div class="flex items-center justify-between">
@@ -467,8 +467,8 @@ onUnmounted(() => {
             </a>
 
             <!-- Phone Card -->
-            <a 
-              href="tel:09243153866" 
+            <a
+              href="tel:09243153866"
               class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] hover:bg-white transition-all cursor-pointer group"
             >
               <div class="flex items-center justify-between">
@@ -484,10 +484,10 @@ onUnmounted(() => {
             </a>
 
             <!-- LinkedIn Card -->
-            <a 
-              href="https://www.linkedin.com/in/jerold-amora-26233727b/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.linkedin.com/in/jerold-amora-26233727b/"
+              target="_blank"
+              rel="noopener noreferrer"
               class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] hover:bg-white transition-all cursor-pointer group"
             >
               <div class="flex items-center justify-between">
