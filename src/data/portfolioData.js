@@ -9,7 +9,7 @@ export const profileData = {
   phone: "09243153866",
   location: "Cabadbaran City, Agusan del Norte, Philippines",
   bio: "I am a 23-year-old fresh graduate with a degree in Information Technology (BSIT, Cum Laude), equipped with web development skills (Vue, Laravel, NestJS, JavaScript, PHP, Python) and a solid technical foundation in computer systems servicing gained through Senior High School TVL track and TESDA NC II certification. Eager to apply my skills, gain practical experience, and grow both personally and professionally in the IT field.",
-  
+
   socials: [
     { name: "GitHub", url: "https://github.com", icon: "Github" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },
@@ -87,11 +87,11 @@ export const profileData = {
     },
     {
       id: "mis-support-portal",
-      systemName: "Campus MIS Ticket & Diagnostics Portal",
-      category: "Full-Stack Enterprise System",
-      url: "#",
+      systemName: "FixIT: IT Helpdesk & Support System",
+      category: "Full-Stack Web Application",
+      url: "https://frontend-it-helpdesk-ticketing-syst.vercel.app/",
       tech: ["Vue", "Laravel API", "PostgreSQL", "Tailwind CSS", "Pinia"],
-      description: "Campus-wide IT ticketing, hardware maintenance logging, and network issue tracking portal designed during MIS Office internship at CSU Cabadbaran Campus."
+      description: "FixIT is a structured, role-aware IT helpdesk system that features a 6-stage automated ticket status lifecycle, role-based access control for Employees, IT Agents, and Administrators, 10MB file attachments, and internal support notes."
     },
     {
       id: "laravel-vue-boilerplate",

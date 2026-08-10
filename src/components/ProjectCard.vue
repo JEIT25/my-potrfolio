@@ -47,7 +47,9 @@ const props = defineProps({
 
       <a
         :href="project.url || '#'"
-        class="px-4 py-2 rounded-xl bg-[#0f172a] hover:bg-[#ff2d20] text-white font-bold text-xs shadow-md transition-all flex items-center gap-1.5 group-hover:scale-105"
+        :target="project.url && project.url !== '#' ? '_blank' : '_self'"
+        rel="noopener noreferrer"
+        class="px-4 py-2 rounded-xl bg-[#0f172a] hover:bg-[#ff2d20] text-white font-bold text-xs shadow-md transition-all flex items-center gap-1.5 group-hover:scale-105 cursor-pointer"
       >
         <span>Visit System</span>
         <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
