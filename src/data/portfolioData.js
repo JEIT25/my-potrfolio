@@ -79,11 +79,11 @@ export const profileData = {
   projects: [
     {
       id: "capstone-attendance",
-      systemName: "QR Attendance & Anomaly Detection System",
+      systemName: "CSUCC QR Connect (Capstone System)",
       category: "Capstone System Project",
       url: "#",
-      tech: ["Vue", "NestJS", "Python Isolation Forest", "MySQL", "Tailwind CSS"],
-      description: "Intelligent student and employee attendance monitoring system pairing real-time QR scanner with Isolation Forest machine learning anomaly detection to isolate suspicious timestamps, proxy scans, and location outliers."
+      tech: ["Nuxt (Vue)", "NestJS API", "Python Flask (Isolation Forest)", "PostgreSQL"],
+      description: "CSUCC QR Connect is an intelligent attendance monitoring system developed for CSU Cabadbaran Campus that pairs configurable two-way QR scanning (instructor batch-scanning and student self-scanning) with a real-time Python Isolation Forest machine learning microservice that calculates Haversine distance and device-fingerprint frequencies to detect and block proxy attendance fraud."
     },
     {
       id: "mis-support-portal",
@@ -93,14 +93,14 @@ export const profileData = {
       tech: ["Vue", "Laravel API", "PostgreSQL", "Tailwind CSS", "Pinia"],
       description: "FixIT is a structured, role-aware IT helpdesk system that features a 6-stage automated ticket status lifecycle, role-based access control for Employees, IT Agents, and Administrators, 10MB file attachments, and internal support notes."
     },
-    {
-      id: "laravel-vue-boilerplate",
-      systemName: "Laravel + Vue SPA Enterprise Starter",
-      category: "Open Source System",
-      url: "#",
-      tech: ["Laravel", "Vue", "Pinia", "Sanctum Auth", "Vite"],
-      description: "High-performance SPA boilerplate featuring Sanctum stateful authentication, dynamic role-based access control, responsive layout primitives, and automated API error handling."
-    },
+    // {
+    //   id: "laravel-vue-boilerplate",
+    //   systemName: "Laravel + Vue SPA Enterprise Starter",
+    //   category: "Open Source System",
+    //   url: "#",
+    //   tech: ["Laravel", "Vue", "Pinia", "Sanctum Auth", "Vite"],
+    //   description: "High-performance SPA boilerplate featuring Sanctum stateful authentication, dynamic role-based access control, responsive layout primitives, and automated API error handling."
+    // },
     // {
     //   id: "techserv-nc2-helper",
     //   systemName: "PC Diagnostics & Network Subnet Calculator",
