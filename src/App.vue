@@ -11,53 +11,6 @@ const isSearchOpen = ref(false)
 const isMobileTocOpen = ref(false)
 const showMisCertModal = ref(false)
 
-const contactForm = ref({ name: '', email: '', message: '' })
-const isSubmittingContact = ref(false)
-const contactSubmitted = ref(false)
-
-const submitContact = async () => {
-  if (!contactForm.value.email || !contactForm.value.message) return
-  isSubmittingContact.value = true
-
-  try {
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        access_key: '5f92272e-3367-4bb2-9bca-c3d5265ed804', // Free Web3Forms key for jeroldash.amora@gmail.com
-        email: contactForm.value.email,
-        name: contactForm.value.name || contactForm.value.email,
-        message: contactForm.value.message,
-        subject: `New Portfolio Contact Message from ${contactForm.value.email}`
-      })
-    })
-
-    const result = await response.json()
-    if (result.success) {
-      contactSubmitted.value = true
-      contactForm.value = { name: '', email: '', message: '' }
-    } else {
-      // Fallback: Mailto link if API key is not active
-      window.location.href = `mailto:jeroldash.amora@gmail.com?subject=Portfolio Message from ${contactForm.value.email}&body=${encodeURIComponent(contactForm.value.message)}`
-      contactSubmitted.value = true
-      contactForm.value = { name: '', email: '', message: '' }
-    }
-  } catch (err) {
-    // Fallback: Mailto link on network error
-    window.location.href = `mailto:jeroldash.amora@gmail.com?subject=Portfolio Message from ${contactForm.value.email}&body=${encodeURIComponent(contactForm.value.message)}`
-    contactSubmitted.value = true
-    contactForm.value = { name: '', email: '', message: '' }
-  } finally {
-    isSubmittingContact.value = false
-    setTimeout(() => {
-      contactSubmitted.value = false
-    }, 5000)
-  }
-}
-
 let observer = null
 
 const handleSectionSelect = (sectionId) => {
@@ -485,83 +438,84 @@ onUnmounted(() => {
           </div>
         </section>
 
-        <!-- SECTION 8: Contact -->
+        <!-- SECTION 8: Direct Contact Information Grid -->
         <section id="contact" class="scroll-mt-24 space-y-6">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight">
-            Contact
-          </h2>
+          <div class="space-y-2 border-b-2 border-slate-200 pb-4">
+            <span class="text-xs font-mono text-[#ff2d20] font-extrabold">DIRECT CONTACT</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight">
+              Contact & Social Channels
+            </h2>
+          </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-            <div class="p-6 sm:p-8 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-4 shadow-xs">
-              <h3 class="text-xl font-extrabold text-[#0f172a]">Jerold M. Amora</h3>
-
-              <div class="space-y-3 text-xs sm:text-sm font-mono">
-                <div>
-                  <span class="text-slate-700 block text-[10px] font-bold">EMAIL</span>
-                  <a href="mailto:jeroldash.amora@gmail.com" class="text-[#0f172a] hover:text-[#ff2d20] font-extrabold text-sm sm:text-base cursor-pointer">
-                    jeroldash.amora@gmail.com
-                  </a>
-                </div>
-                <div>
-                  <span class="text-slate-700 block text-[10px] font-bold">PHONE</span>
-                  <a href="tel:09243153866" class="text-[#0f172a] hover:text-[#ff2d20] font-extrabold text-sm sm:text-base cursor-pointer">
-                    09243153866
-                  </a>
-                </div>
-                <div>
-                  <span class="text-slate-700 block text-[10px] font-bold">LINKEDIN PROFILE</span>
-                  <a 
-                    href="https://www.linkedin.com/in/jerold-amora-26233727b/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    class="text-[#0f172a] hover:text-[#ff2d20] font-extrabold text-sm sm:text-base cursor-pointer inline-flex items-center gap-1.5"
-                  >
-                    <span>linkedin.com/in/jerold-amora</span>
-                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
-                <div>
-                  <span class="text-slate-700 block text-[10px] font-bold">LOCATION</span>
-                  <span class="text-[#0f172a] font-extrabold">Cabadbaran City, Agusan del Norte, Philippines</span>
-                </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Email Card -->
+            <a 
+              href="mailto:jeroldash.amora@gmail.com" 
+              class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] hover:bg-white transition-all cursor-pointer group"
+            >
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono text-[#ff2d20] font-extrabold tracking-wider uppercase">EMAIL ADDRESS</span>
+                <svg class="w-5 h-5 text-slate-700 group-hover:text-[#ff2d20] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
               </div>
+              <div class="text-base sm:text-lg font-extrabold text-[#0f172a] group-hover:text-[#ff2d20] transition-colors font-mono truncate">
+                jeroldash.amora@gmail.com
+              </div>
+              <p class="text-xs text-slate-700 font-semibold font-mono">Click to send an email ✉</p>
+            </a>
+
+            <!-- Phone Card -->
+            <a 
+              href="tel:09243153866" 
+              class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] hover:bg-white transition-all cursor-pointer group"
+            >
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono text-[#0f172a] font-extrabold tracking-wider uppercase">PHONE NUMBER</span>
+                <svg class="w-5 h-5 text-slate-700 group-hover:text-[#0f172a] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div class="text-base sm:text-lg font-extrabold text-[#0f172a] font-mono">
+                09243153866
+              </div>
+              <p class="text-xs text-slate-700 font-semibold font-mono">Click to place a call 📞</p>
+            </a>
+
+            <!-- LinkedIn Card -->
+            <a 
+              href="https://www.linkedin.com/in/jerold-amora-26233727b/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] hover:bg-white transition-all cursor-pointer group"
+            >
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono text-blue-700 font-extrabold tracking-wider uppercase">LINKEDIN PROFILE</span>
+                <svg class="w-5 h-5 text-blue-700 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+                </svg>
+              </div>
+              <div class="text-base sm:text-lg font-extrabold text-[#0f172a] group-hover:text-blue-700 transition-colors font-mono truncate">
+                linkedin.com/in/jerold-amora
+              </div>
+              <p class="text-xs text-slate-700 font-semibold font-mono">View official LinkedIn profile ↗</p>
+            </a>
+
+            <!-- Location Card -->
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono text-amber-700 font-extrabold tracking-wider uppercase">LOCATION</span>
+                <svg class="w-5 h-5 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div class="text-base sm:text-lg font-extrabold text-[#0f172a] font-mono">
+                Cabadbaran City, Agusan del Norte, Philippines
+              </div>
+              <p class="text-xs text-slate-700 font-semibold font-mono">Caraga Region (UTC+8)</p>
             </div>
-
-            <form @submit.prevent="submitContact" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs">
-              <div class="text-xs font-extrabold text-[#0f172a] uppercase tracking-wider">SEND MESSAGE</div>
-
-              <input
-                v-model="contactForm.email"
-                type="email"
-                required
-                placeholder="Your email address"
-                class="w-full px-4 py-2.5 rounded-xl bg-white border-2 border-slate-300 text-xs sm:text-sm text-slate-900 font-medium placeholder-slate-500 focus:outline-none focus:border-[#0f172a]"
-              />
-
-              <textarea
-                v-model="contactForm.message"
-                required
-                rows="3"
-                placeholder="Your message..."
-                class="w-full px-4 py-2.5 rounded-xl bg-white border-2 border-slate-300 text-xs sm:text-sm text-slate-900 font-medium placeholder-slate-500 focus:outline-none focus:border-[#0f172a]"
-              ></textarea>
-
-              <button
-                type="submit"
-                :disabled="isSubmittingContact"
-                class="w-full py-3 rounded-xl bg-[#0f172a] hover:bg-[#ff2d20] text-white text-xs sm:text-sm font-bold transition-colors shadow-sm cursor-pointer disabled:opacity-50"
-              >
-                <span v-if="isSubmittingContact">Sending Message...</span>
-                <span v-else>Send Message</span>
-              </button>
-
-              <div v-if="contactSubmitted" class="text-[11px] text-emerald-700 font-mono text-center font-extrabold">
-                ✓ Message sent successfully!
-              </div>
-            </form>
 
           </div>
         </section>
