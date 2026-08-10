@@ -369,10 +369,6 @@ onUnmounted(() => {
                     <span class="text-[#ff2d20] font-extrabold">•</span>
                     <span>Configured operating systems, conducted PC hardware diagnostics, and resolved local network connectivity issues.</span>
                   </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#ff2d20] font-extrabold">•</span>
-                    <span>Assisted in MIS database administration, system log auditing, and campus-wide technical user support.</span>
-                  </li>
                 </ul>
               </div>
 
