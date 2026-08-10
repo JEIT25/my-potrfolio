@@ -81,7 +81,7 @@ export const profileData = {
       id: "capstone-attendance",
       systemName: "CSUCC QR Connect (Capstone System)",
       category: "Capstone System Project",
-      url: "#",
+      url: "https://csucc-qr-connect-frontend-neon.vercel.app/",
       tech: ["Nuxt (Vue)", "NestJS API", "Python Flask (Isolation Forest)", "PostgreSQL"],
       description: "CSUCC QR Connect is an intelligent attendance monitoring system developed for CSU Cabadbaran Campus that pairs configurable two-way QR scanning (instructor batch-scanning and student self-scanning) with a real-time Python Isolation Forest machine learning microservice that calculates Haversine distance and device-fingerprint frequencies to detect and block proxy attendance fraud."
     },
