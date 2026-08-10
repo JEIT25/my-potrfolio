@@ -66,12 +66,12 @@ export const profileData = {
   capstone: {
     title: "QR-Based Attendance Tracking with Isolation Forest Anomaly Detection",
     tagline: "Capstone System Project (2025 - 2026)",
-    technologies: ["Vue", "Laravel", "Python / Isolation Forest", "MySQL", "REST API", "Tailwind CSS"],
+    technologies: ["Vue", "NestJS", "Python / Isolation Forest", "MySQL", "REST API", "Tailwind CSS"],
     description: "An intelligent, real-time student and employee attendance monitoring system that pairs quick QR code verification with Machine Learning anomaly detection (Isolation Forest algorithm) to automatically spot suspicious timestamps, proxy scanning, and irregular log patterns.",
     keyFeatures: [
       "Real-Time QR Scanner interface built with Vue Composition API",
       "Isolation Forest Anomaly Detection engine flagging outlier check-ins in milliseconds",
-      "Laravel REST API backend with Sanctum authorization & structured response schemas",
+      "NestJS REST API backend with Sanctum authorization & structured response schemas",
       "Comprehensive Admin dashboard with customizable automated audit reports and metrics export"
     ]
   },
@@ -82,8 +82,8 @@ export const profileData = {
       systemName: "QR Attendance & Anomaly Detection System",
       category: "Capstone System Project",
       url: "#",
-      tech: ["Vue", "Laravel API", "Python Isolation Forest", "MySQL", "Tailwind CSS"],
-      description: "Intelligent student and employee attendance monitoring system pairing real-time QR scanner with Isolation Forest machine learning anomaly detection to isolate suspicious timestamps, proxy scans, and geofence outliers."
+      tech: ["Vue", "NestJS", "Python Isolation Forest", "MySQL", "Tailwind CSS"],
+      description: "Intelligent student and employee attendance monitoring system pairing real-time QR scanner with Isolation Forest machine learning anomaly detection to isolate suspicious timestamps, proxy scans, and location outliers."
     },
     {
       id: "mis-support-portal",
@@ -101,30 +101,30 @@ export const profileData = {
       tech: ["Laravel", "Vue", "Pinia", "Sanctum Auth", "Vite"],
       description: "High-performance SPA boilerplate featuring Sanctum stateful authentication, dynamic role-based access control, responsive layout primitives, and automated API error handling."
     },
-    {
-      id: "techserv-nc2-helper",
-      systemName: "PC Diagnostics & Network Subnet Calculator",
-      category: "Technical Utility System",
-      url: "#",
-      tech: ["JavaScript", "HTML5", "CSS3", "Node.js"],
-      description: "Automated IP address calculator, TCP/IP subnetting validator, and hardware diagnostic checklist tool designed for TVL & TESDA NC II computer servicing technicians."
-    },
-    {
-      id: "system-slot-5",
-      systemName: "Full-Stack E-Commerce & Service Management Portal",
-      category: "Upcoming Hosted System #1",
-      url: "#",
-      tech: ["Vue", "Laravel API", "MySQL", "Stripe API"],
-      description: "Next-generation service scheduling and inventory tracking platform featuring real-time checkout analytics, invoice generation, and customer portal."
-    },
-    {
-      id: "system-slot-6",
-      systemName: "Microservice Network Telemetry Dashboard",
-      category: "Upcoming Hosted System #2",
-      url: "#",
-      tech: ["Vue", "NestJS", "PostgreSQL", "WebSocket"],
-      description: "Real-time network ping latency monitoring, server health metric telemetry, and instant alert notification system."
-    }
+    // {
+    //   id: "techserv-nc2-helper",
+    //   systemName: "PC Diagnostics & Network Subnet Calculator",
+    //   category: "Technical Utility System",
+    //   url: "#",
+    //   tech: ["JavaScript", "HTML5", "CSS3", "Node.js"],
+    //   description: "Automated IP address calculator, TCP/IP subnetting validator, and hardware diagnostic checklist tool designed for TVL & TESDA NC II computer servicing technicians."
+    // },
+    // {
+    //   id: "system-slot-5",
+    //   systemName: "Full-Stack E-Commerce & Service Management Portal",
+    //   category: "Upcoming Hosted System #1",
+    //   url: "#",
+    //   tech: ["Vue", "Laravel API", "MySQL", "Stripe API"],
+    //   description: "Next-generation service scheduling and inventory tracking platform featuring real-time checkout analytics, invoice generation, and customer portal."
+    // },
+    // {
+    //   id: "system-slot-6",
+    //   systemName: "Microservice Network Telemetry Dashboard",
+    //   category: "Upcoming Hosted System #2",
+    //   url: "#",
+    //   tech: ["Vue", "NestJS", "PostgreSQL", "WebSocket"],
+    //   description: "Real-time network ping latency monitoring, server health metric telemetry, and instant alert notification system."
+    // }
   ],
 
   technicalSkills: {
@@ -132,7 +132,9 @@ export const profileData = {
     frameworks: ["Vue", "Laravel", "NestJS"],
     tools: ["Git", "GitHub", "VS Code", "Postman", "Vite", "NPM"],
     databases: ["MySQL", "PostgreSQL"],
-    frontend: ["HTML5", "CSS3", "Tailwind CSS", "RESTful APIs", "Pinia", "Vue Router"]
+    frontend: ["HTML5", "CSS3", "Tailwind CSS", "RESTful APIs", "Pinia", "Vue Router"],
+    hosting: ["Vercel", "Supabase", "Render", "Railway"],
+    aiTools: ["Claude", "Gemini", "DeepSeek"]
   },
 
   expertise: [

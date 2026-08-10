@@ -182,7 +182,7 @@ onUnmounted(() => {
             Technical Skills
           </h2>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
             <!-- Frameworks -->
             <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
@@ -230,6 +230,29 @@ onUnmounted(() => {
               </ul>
             </div>
 
+            <!-- Hosting Platforms -->
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
+              <div class="text-xs font-mono font-extrabold text-emerald-700 tracking-wider uppercase">HOSTING PLATFORMS</div>
+              <ul class="space-y-2 text-sm font-bold text-[#0f172a]">
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-black">•</span>
+                  <span>Vercel</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-black">•</span>
+                  <span>Supabase</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-black">•</span>
+                  <span>Render</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-black">•</span>
+                  <span>Railway</span>
+                </li>
+              </ul>
+            </div>
+
             <!-- Databases & Tools -->
             <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
               <div class="text-xs font-mono font-extrabold text-blue-700 tracking-wider uppercase">DATABASES & TOOLS</div>
@@ -249,6 +272,25 @@ onUnmounted(() => {
                 <li class="flex items-center gap-2">
                   <span class="text-blue-700 font-black">•</span>
                   <span>Vite & NPM</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- AI Coding Tools -->
+            <div class="p-6 rounded-2xl bg-slate-50 border-2 border-slate-300 space-y-3 shadow-xs hover:border-[#0f172a] transition-colors">
+              <div class="text-xs font-mono font-extrabold text-purple-700 tracking-wider uppercase">AI CODING TOOLS</div>
+              <ul class="space-y-2 text-sm font-bold text-[#0f172a]">
+                <li class="flex items-center gap-2">
+                  <span class="text-purple-700 font-black">•</span>
+                  <span>Claude</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-purple-700 font-black">•</span>
+                  <span>Gemini</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-purple-700 font-black">•</span>
+                  <span>DeepSeek</span>
                 </li>
               </ul>
             </div>
