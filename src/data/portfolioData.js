@@ -11,8 +11,8 @@ export const profileData = {
   bio: "I am a 23-year-old fresh graduate with a degree in Information Technology (BSIT, Cum Laude), equipped with web development skills (Vue, Laravel, NestJS, JavaScript, PHP, Python) and a solid technical foundation in computer systems servicing gained through Senior High School TVL track and TESDA NC II certification. Eager to apply my skills, gain practical experience, and grow both personally and professionally in the IT field.",
 
   socials: [
-    { name: "GitHub", url: "https://github.com", icon: "Github" },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },
+    { name: "GitHub", url: "https://github.com/JEIT25", icon: "Github" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/jerold-amora-26233727b/", icon: "Linkedin" },
     { name: "Email", url: "mailto:jeroldash.amora@gmail.com", icon: "Mail" },
     { name: "Phone", url: "tel:09243153866", icon: "Phone" }
   ],

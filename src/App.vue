@@ -12,15 +12,50 @@ const isMobileTocOpen = ref(false)
 const showMisCertModal = ref(false)
 
 const contactForm = ref({ name: '', email: '', message: '' })
+const isSubmittingContact = ref(false)
 const contactSubmitted = ref(false)
 
-const submitContact = () => {
+const submitContact = async () => {
   if (!contactForm.value.email || !contactForm.value.message) return
-  contactSubmitted.value = true
-  setTimeout(() => {
-    contactSubmitted.value = false
+  isSubmittingContact.value = true
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key: '5f92272e-3367-4bb2-9bca-c3d5265ed804', // Free Web3Forms key for jeroldash.amora@gmail.com
+        email: contactForm.value.email,
+        name: contactForm.value.name || contactForm.value.email,
+        message: contactForm.value.message,
+        subject: `New Portfolio Contact Message from ${contactForm.value.email}`
+      })
+    })
+
+    const result = await response.json()
+    if (result.success) {
+      contactSubmitted.value = true
+      contactForm.value = { name: '', email: '', message: '' }
+    } else {
+      // Fallback: Mailto link if API key is not active
+      window.location.href = `mailto:jeroldash.amora@gmail.com?subject=Portfolio Message from ${contactForm.value.email}&body=${encodeURIComponent(contactForm.value.message)}`
+      contactSubmitted.value = true
+      contactForm.value = { name: '', email: '', message: '' }
+    }
+  } catch (err) {
+    // Fallback: Mailto link on network error
+    window.location.href = `mailto:jeroldash.amora@gmail.com?subject=Portfolio Message from ${contactForm.value.email}&body=${encodeURIComponent(contactForm.value.message)}`
+    contactSubmitted.value = true
     contactForm.value = { name: '', email: '', message: '' }
-  }, 4000)
+  } finally {
+    isSubmittingContact.value = false
+    setTimeout(() => {
+      contactSubmitted.value = false
+    }, 5000)
+  }
 }
 
 let observer = null
@@ -464,14 +499,28 @@ onUnmounted(() => {
               <div class="space-y-3 text-xs sm:text-sm font-mono">
                 <div>
                   <span class="text-slate-700 block text-[10px] font-bold">EMAIL</span>
-                  <a href="mailto:jeroldash.amora@gmail.com" class="text-[#0f172a] hover:text-[#ff2d20] font-extrabold text-sm sm:text-base">
+                  <a href="mailto:jeroldash.amora@gmail.com" class="text-[#0f172a] hover:text-[#ff2d20] font-extrabold text-sm sm:text-base cursor-pointer">
                     jeroldash.amora@gmail.com
                   </a>
                 </div>
                 <div>
                   <span class="text-slate-700 block text-[10px] font-bold">PHONE</span>
-                  <a href="tel:09243153866" class="text-[#0f172a] hover:text-[#ff2d20] font-extrabold text-sm sm:text-base">
+                  <a href="tel:09243153866" class="text-[#0f172a] hover:text-[#ff2d20] font-extrabold text-sm sm:text-base cursor-pointer">
                     09243153866
+                  </a>
+                </div>
+                <div>
+                  <span class="text-slate-700 block text-[10px] font-bold">LINKEDIN PROFILE</span>
+                  <a 
+                    href="https://www.linkedin.com/in/jerold-amora-26233727b/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="text-[#0f172a] hover:text-[#ff2d20] font-extrabold text-sm sm:text-base cursor-pointer inline-flex items-center gap-1.5"
+                  >
+                    <span>linkedin.com/in/jerold-amora</span>
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
                   </a>
                 </div>
                 <div>
@@ -502,9 +551,11 @@ onUnmounted(() => {
 
               <button
                 type="submit"
-                class="w-full py-3 rounded-xl bg-[#0f172a] hover:bg-[#ff2d20] text-white text-xs sm:text-sm font-bold transition-colors shadow-sm"
+                :disabled="isSubmittingContact"
+                class="w-full py-3 rounded-xl bg-[#0f172a] hover:bg-[#ff2d20] text-white text-xs sm:text-sm font-bold transition-colors shadow-sm cursor-pointer disabled:opacity-50"
               >
-                Send Message
+                <span v-if="isSubmittingContact">Sending Message...</span>
+                <span v-else>Send Message</span>
               </button>
 
               <div v-if="contactSubmitted" class="text-[11px] text-emerald-700 font-mono text-center font-extrabold">
